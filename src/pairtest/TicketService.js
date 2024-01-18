@@ -62,7 +62,7 @@ export default class TicketService {
 
       return { totalAmount, totalSeats };
     } catch (e) {
-      logger.error(e)
+      logger.error(e.message)
       throw new InvalidPurchaseException(e.message || "An Error Occurred");
     }
   }
